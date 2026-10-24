@@ -1,0 +1,10 @@
+services:
+  aurabeat:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: aurabeat-music-player:latest
+    container_name: aurabeat-player
+    ports:
+      - "8080:80"
+    restart: unless-stopped
